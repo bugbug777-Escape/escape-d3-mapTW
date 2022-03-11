@@ -19,7 +19,6 @@ function ConvertRGBtoHex(rbg) {
     ColorToHex(parseInt(match[3]))
   );
 }
-// ConvertRGBtoHex("rgb(255, 100, 200)");
 
 const app = Vue.createApp({
   data() {
@@ -48,7 +47,6 @@ const app = Vue.createApp({
           "#ec595c", // <= lower bound of our color scale
           "#bcafb0", // <= upper bound of our color scale
         ]);
-      // console.log(typeof colorScale(1));
 
       d3.select("g.counties")
         .selectAll("path")
@@ -59,7 +57,6 @@ const app = Vue.createApp({
         .enter()
         .append("path")
         .on("mouseover", function (e) {
-          // console.log(e.target.__data__.properties.COUNTYNAME);
           let str;
           const newData = countyRevenue.find(
             (item) => item.city === e.target.__data__.properties.COUNTYNAME
